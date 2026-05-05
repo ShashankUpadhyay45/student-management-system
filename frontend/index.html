@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <h2>Student Management</h2>
+    <button class="logout" onclick="logout()">Logout</button>
+  </div>
+
+  <div class="controls">
+    <input id="search" placeholder="Search student..." />
+    <div>
+      <button onclick="sortByName()">Sort Name</button>
+      <button onclick="sortByAge()">Sort Age</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <form id="studentForm">
+      <input id="name" placeholder="Name" required>
+      <input id="email" placeholder="Email" required>
+      <input id="age" placeholder="Age" required>
+      <button class="save-btn">Save</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Age</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="studentTable"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
